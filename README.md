@@ -1,5 +1,7 @@
-# 3301
+# Clima
 A weather app for android, utilizing phone GPS and external weather API to get local weather
 
 
-Project is currently in a hard drive in a broken desktop, waiting on delivery of SATA cord to upload it to this repo
+Started from a tutorial, but implemented original features such as a help page, and reconfiguring for 4 concurrent weather readings from different location
+
+Project can be opened and ran in android studio
