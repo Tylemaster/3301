@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FF69B4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextClock
+            android:id="@+id/helptime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="12:00AM"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationhelp" />
+
+        <TextView
+            android:id="@+id/locationhelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="London"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherSymbolIV5" />
+
+        <ImageButton
+            android:id="@+id/changeCityButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@null"
+            android:contentDescription="@string/change_city_description"
+            android:src="@drawable/change_city_symbol_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/weatherSymbolIV5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:contentDescription="@string/weather_description"
+            android:src="@drawable/cloudy2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.44" />
+
+        <TextView
+            android:id="@+id/helpTemp"
+            android:layout_width="37dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="12°"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/helpDayNight1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/day"
+            app:layout_constraintEnd_toStartOf="@+id/helpDayNight2"
+            app:layout_constraintStart_toEndOf="@+id/helpTemp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/day" />
+
+        <ImageView
+            android:id="@+id/helpDayNight2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/night"
+            app:layout_constraintEnd_toStartOf="@+id/changeCityButton5"
+            app:layout_constraintStart_toEndOf="@+id/helpDayNight1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/night" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/helptime"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tempInst"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            android:text="Temperature Display (Celsius)"
+            android:textAlignment="viewStart"
+            android:textColor="#007700"
+            android:textSize="9sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpTemp"
+            tools:text="Temperature Display (Celsius)" />
+
+        <TextView
+            android:id="@+id/changeInst"
+            android:layout_width="52dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Click Here to Change Current City!"
+            android:textColor="#009900"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/changeCityButton5" />
+
+        <TextView
+            android:id="@+id/dayNightInst"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text=" Local Day or Night Icon"
+            android:textColor="#007700"
+            app:layout_constraintEnd_toStartOf="@+id/changeCityButton5"
+            app:layout_constraintStart_toEndOf="@+id/helpTemp"
+            app:layout_constraintTop_toBottomOf="@+id/helpDayNight2"
+            tools:text="Local Day or Night Icon" />
+
+        <TextView
+            android:id="@+id/weatherIconInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Weather Icon For Current City"
+            android:textColor="#007700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/weatherSymbolIV5" />
+
+        <TextView
+            android:id="@+id/CityInst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="City Name"
+            android:textColor="#007700"
+            app:layout_constraintEnd_toEndOf="@+id/locationhelp"
+            app:layout_constraintStart_toStartOf="@+id/locationhelp"
+            app:layout_constraintTop_toBottomOf="@+id/locationhelp" />
+
+        <TextView
+            android:id="@+id/timeInst"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Local Time For Current City"
+            android:textColor="#007700"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="@+id/helptime"
+            app:layout_constraintStart_toStartOf="@+id/helptime"
+            app:layout_constraintTop_toBottomOf="@+id/helptime"
+            tools:text="Local Time For Current City" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sun for Day, Grey Circle for Night"
+            android:textColor="#007700"
+            app:layout_constraintEnd_toEndOf="@+id/dayNightInst"
+            app:layout_constraintStart_toStartOf="@+id/dayNightInst"
+            app:layout_constraintTop_toBottomOf="@+id/dayNightInst" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Displayed here are explanations as to what each icon displays on the main screen"
+            android:textColor="#00FF00"
+            app:layout_constraintBottom_toTopOf="@+id/back"
+            app:layout_constraintEnd_toStartOf="@+id/locationhelp"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/weatherIconInst"
+            app:layout_constraintVertical_bias="0.594"
+            tools:text="Displayed here are explanations as to what each icon displays on the main screen" />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
